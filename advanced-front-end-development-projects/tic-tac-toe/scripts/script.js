@@ -25,6 +25,7 @@ $(document).ready(function() {
     newGame();
   });
 
+  // calls newGame function if user wants to play again
   $("#restart").click(function() {
     $(".result").html("");
     newGame();
@@ -36,6 +37,9 @@ $(document).ready(function() {
       if ($(this).text() === "") {
         $(this).text(user);
         checkBoxes();
+        if (gameOver() === true) {
+          return true;
+        };
         turn = 1;
         compMove();
         checkBoxes();
@@ -55,6 +59,20 @@ $(document).ready(function() {
     turn = 0;
   }
 
+  // function to check what is in each box
+  function checkBoxes() {
+    box1 = $("#1").html();
+    box2 = $("#2").html();
+    box3 = $("#3").html();
+    box4 = $("#4").html();
+    box5 = $("#5").html();
+    box6 = $("#6").html();
+    box7 = $("#7").html();
+    box8 = $("#8").html();
+    box9 = $("#9").html();
+  }
+
+  // function that controls computer's move
   function compMove() {
     // winning scenarios
     if (box1 === "" && ((box2 === comp && box3 === comp) || (box4 === comp && box7 === comp) || (box5 === comp && box9 === comp)))
@@ -131,7 +149,6 @@ $(document).ready(function() {
   function rndNumber() {
     var rnd = Math.floor(Math.random() * 9 + 1);
     var testBox = "#" + rnd;
-    console.log(testBox);
     if ($(testBox).html() === user || $(testBox).html() === comp) {
       rndNumber();
     } else {
@@ -140,33 +157,23 @@ $(document).ready(function() {
     }
   }
 
-  // function to check what is in each box
-  function checkBoxes() {
-    box1 = $("#1").html();
-    box2 = $("#2").html();
-    box3 = $("#3").html();
-    box4 = $("#4").html();
-    box5 = $("#5").html();
-    box6 = $("#6").html();
-    box7 = $("#7").html();
-    box8 = $("#8").html();
-    box9 = $("#9").html();
-  }
-
   // determines if game is over via if/else statements
   function gameOver() {
     if ((box1 === user && box2 === user && box3 === user) || (box1 === user && box5 === user && box9 === user) || (box2 === user && box5 === user && box8 === user) || (box3 === user && box5 === user && box7 === user) || (box4 === user && box5 === user && box6 === user) || (box7 === user && box8 === user && box9 === user) || (box1 === user && box4 === user && box7 === user) || (box3 === user && box6 === user && box9 === user)) {
       $(".result").html("<p>You win!!!</p>");
       $(".restart").show();
       $(".start").hide();
+      return true;
     } else if ((box1 === comp && box2 === comp && box3 === comp) || (box1 === comp && box5 === comp && box9 === comp) || (box2 === comp && box5 === comp && box8 === comp) || (box3 === comp && box5 === comp && box7 === comp) || (box4 === comp && box5 === comp && box6 === comp) || (box7 === comp && box8 === comp && box9 === comp) || (box1 === comp && box4 === comp && box7 === comp) || (box3 === comp && box6 === comp && box9 === comp))  {
       $(".result").html("<p>You lose!</p>");
       $(".restart").show();
       $(".start").hide();
+      return true;
     } else if (box1 && box2 && box3 && box4 && box5 && box6 && box7 && box8 && box9) {
       $(".result").html("<p>It's a draw!</p>");
       $(".restart").show();
       $(".start").hide();
+      return true;
     }
   };
 });
