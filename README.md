@@ -1,5 +1,5 @@
 # Free Code Camp
-A collection of all of my Free Code Camp work (uploading in progress). This includes all solved algorithm challenges, as well as my finished projects.
+A collection of all of my Free Code Camp work. This includes all solved algorithm challenges, as well as my finished projects.
 
 [FCC Profile Link](https://www.freecodecamp.com/wildlifehexagon)
 
