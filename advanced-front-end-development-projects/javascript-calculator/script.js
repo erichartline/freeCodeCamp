@@ -3,25 +3,32 @@ $(document).ready(function() {
     var output = $("#output");
     output.text("0");
 
-    $('.numbers, .operator').click(function() {
+    $('.numbers, .operator, #decimal').click(function() {
         num += this.value;
         output.text(num);
-        if (num.length > 10) {
-          output.text("Overflow");
-        }
-        //if (num.slice(-1) === "+" || num.slice(-1) === "-" || num.slice(-1) === "/" || num.slice(-1) === "*" || num.slice(-1) === ".") {
-          // disable click           $(".operator").attr("disabled", true);
-        // }
-        // checkLimit();
+        checkOperator();
+        checkLimit();
     });
 
-/*
-    function checkLimit() {
-      if (num.length >= 9) {
-        num = num.substring(0,8);
+    // checks if last input was an operator and prevents two from being used twice in a row
+    function checkOperator() {
+      if (num.slice(-1) === "+" || num.slice(-1) === "-" || num.slice(-1) === "/" || num.slice(-1) === "*") {
+        $(".operator").attr("disabled", true);
+      } else if (num.slice(-1) === ".") {
+        $("#decimal").attr("disabled", true);
       }
-    }
-    */
+      else {
+        $(".operator").removeAttr("disabled");
+        $("#decimal").removeAttr("disabled");
+        output.text(num);
+      }
+    };
+
+    function checkLimit() {
+      if (num.length > 10) {
+        output.text("Overflow");
+      }
+    };
 
     $('#ac').click(function() {
         num = "";
@@ -30,50 +37,57 @@ $(document).ready(function() {
 
     $('#ce').click(function() {
         num = num.slice(0, -1);
-        output.text(num);
+        if (num === "") {
+          output.text("0");
+        } else {
+          output.text(num);
+        }
     });
 
     $('#equals').click(function() {
         num = eval(num);
         output.text(num);
+        checkLimit();
     });
 
     $(document).keypress(function(event) {
         var keycode = (event.keyCode ? event.keyCode : event.which);
         if (keycode === 49) {
-            $("#one").click();
+          $("#one").click();
         } else if (keycode === 50) {
-            $("#two").click();
+          $("#two").click();
         } else if (keycode === 51) {
-            $("#three").click();
+          $("#three").click();
         } else if (keycode === 52) {
-            $("#four").click();
+          $("#four").click();
         } else if (keycode === 53) {
-            $("#five").click();
+          $("#five").click();
         } else if (keycode === 54) {
-            $("#six").click();
+          $("#six").click();
         } else if (keycode === 55) {
-            $("#seven").click();
+          $("#seven").click();
         } else if (keycode === 56) {
-            $("#eight").click();
+          $("#eight").click();
         } else if (keycode === 57) {
-            $("#nine").click();
+          $("#nine").click();
         } else if (keycode === 48) {
-            $("#zero").click();
+          $("#zero").click();
         } else if (keycode === 97) {
-            $("#ac").click();
+          $("#ac").click();
         } else if (keycode === 99) {
-            $("#ce").click();
+          $("#ce").click();
         } else if (keycode === 61 || keycode === 13 || keycode === 187) {
-            $("#equals").click();
+          $("#equals").click();
         } else if (keycode === 43) {
-            $("#add").click();
+          $("#add").click();
         } else if (keycode === 45) {
-            $("#subtract").click();
+          $("#subtract").click();
         } else if (keycode === 42 || keycode === 120) {
-            $("#multiply").click();
+          $("#multiply").click();
         } else if (keycode === 47) {
-            $("#divide").click();
+          $("#divide").click();
+        } else if (keycode === 110 || keycode === 190) {
+          $("#decimal").click();
         }
     });
 
