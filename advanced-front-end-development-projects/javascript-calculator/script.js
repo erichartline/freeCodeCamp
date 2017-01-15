@@ -1,13 +1,32 @@
 $(document).ready(function() {
-    var num = "";
+    var num = "", operator = "", num2 = "", equation = "";
     var output = $("#output");
     output.text("0");
+    var history = $("#history");
+    history.text("0");
 
-    $('.numbers, .operator, #decimal').click(function() {
-        num += this.value;
-        output.text(num);
+    $('.numbers').click(function() {
+        if($('.operator, #decimal').data('clicked')) {
+          num2 += this.value;
+          equation = num + num2;
+          output.text(num2);
+          history.text(equation);
+        } else {
+          num += this.value;
+          output.text(num);
+          history.text(num);
+        }
         checkOperator();
         checkLimit();
+    });
+
+    $('.operator, #decimal').click(function() {
+      $(this).data('clicked', true);
+      num += this.value;
+      operator = this.value;
+      output.text(operator);
+      history.text(num);
+      checkOperator();
     });
 
     // checks if last input was an operator and prevents two from being used twice in a row
@@ -16,38 +35,49 @@ $(document).ready(function() {
         $(".operator").attr("disabled", true);
       } else if (num.slice(-1) === ".") {
         $("#decimal").attr("disabled", true);
-      }
-      else {
+      } else {
         $(".operator").removeAttr("disabled");
         $("#decimal").removeAttr("disabled");
-        output.text(num);
+        history.text(num);
       }
     };
 
     function checkLimit() {
       if (num.length > 10) {
-        output.text("Overflow");
+        num = "";
+        num2 = "";
+        operator = "";
+        output.text("0");
+        history.text("Digit Limit Reached");
       }
     };
 
     $('#ac').click(function() {
         num = "";
+        num2 = "";
+        equation = "";
+        operator = "";
         output.text("0");
+        history.text("0");
+        $('.operator, #decimal').data('clicked', false);
     });
 
     $('#ce').click(function() {
         num = num.slice(0, -1);
         if (num === "") {
           output.text("0");
+          history.text("0");
         } else {
           output.text(num);
+          history.text(num);
         }
     });
 
     $('#equals').click(function() {
-        num = eval(num);
-        output.text(num);
-        checkLimit();
+      num = eval(equation);
+      num = num.toString().match(/^-?\d+(?:\.\d{0,8})?/)[0]
+      output.text(num);
+      history.text(equation + " = " + num);
     });
 
     $(document).keypress(function(event) {
