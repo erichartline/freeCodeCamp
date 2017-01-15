@@ -15,7 +15,10 @@ body {
   padding-right: 5px;
 }
 #history {
-  font-size: 12pt;
+  color: #42707B;
+  font-size: 13pt;
+  position: relative;
+  bottom: 10px;
   padding-right: 5px;
 }
 .calculator {
@@ -28,7 +31,7 @@ body {
   background: #5591C3;
   border-radius: 15px;
   font-weight: bold;
-  margin-top: 2%;
+  margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
 }
