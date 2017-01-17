@@ -4,7 +4,6 @@
 body {
   background-color: #202020;
   font-family: 'Days One', sans-serif;
-
 }
 #screen {
   background: #94AFB5;
@@ -34,9 +33,6 @@ body {
   margin-top: 3%;
   margin-left: auto;
   margin-right: auto;
-}
-fa {
-  color: red;
 }
 button {
   margin: 2px;

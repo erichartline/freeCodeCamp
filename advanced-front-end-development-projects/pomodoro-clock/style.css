@@ -1,0 +1,16 @@
+* {
+  margin: 10px auto;
+  text-align: center;
+}
+body {
+  background-color: #202020;
+  font-family: 'Days One', sans-serif;
+  color: #5591C3;
+}
+h1 {
+  color: #D17900;
+}
+.footer {
+  font-size: 10pt;
+  color: #D17900;
+}

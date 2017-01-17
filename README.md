@@ -9,7 +9,7 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### Basic Front End Development projects
 1. [Build a Tribute Page](https://codepen.io/wildlifehexagon/full/GozYYd/)
 
-2. Build a Personal Portfolio Webpage
+2. [Build a Personal Portfolio Webpage](http://www.erichartline.net)
 
 
 ### [Basic Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/basic-algorithm-scripting)
