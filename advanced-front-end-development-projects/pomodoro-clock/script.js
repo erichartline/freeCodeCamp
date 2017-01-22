@@ -2,52 +2,63 @@ $(document).ready(function() {
   var rest = 5;
   var session = 25;
   var timer;
-  var breakLength = $("#breakLength");
-  breakLength.text(5);
-  var sessionLength = $("#sessionLength");
-  sessionLength.text(25);
-  var clock = $("#clock");
+  var breakLength = $("#break-length");
+  breakLength.text(rest);
+  var sessionLength = $("#session-length");
+  sessionLength.text(session);
+  var clock = $("#time-left");
 
-  $("#breakMinus").click(function() {
+  $("#break-decrement").click(function() {
     rest -= 1;
-    if (rest === 1) {
-      // disable click
+    if (rest <= 1) {
+      rest = 1;
     }
     breakLength.text(rest);
   });
-  $("#sessionMinus").click(function() {
+  $("#session-decrement").click(function() {
     session -= 1;
-    if (session === 1) {
-      // disable click
+    if (session <= 1) {
+      session = 1;
     }
     sessionLength.text(session);
   });
-  $("#breakPlus").click(function() {
+  $("#break-increment").click(function() {
     rest += 1;
-    if (rest === 1) {
-      // disable click
+    if (rest > 60) {
+      rest = 60;
     }
     breakLength.text(rest);
   });
-  $("#sessionPlus").click(function() {
+  $("#session-increment").click(function() {
     session += 1;
-    if (session === 1) {
-      // disable click
+    if (session > 60) {
+      session = 60;
     }
     sessionLength.text(session);
   });
-  $("#session").click(function() {
+  $("#timer-label").click(function() {
     // start timer
     startTimer();
+    console.log(session);
   });
-  function stopTimer() {
+  $('#reset').click(function() {
     clearInterval(timer);
+    rest = 5;
+    session = 25;
+    // need to fix timer variable?
     timer = null;
-  };
+    breakLength.text(5);
+    sessionLength.text(25);
+  });
   function startTimer() {
-    session--;
+    setInterval(function() {
+      session--;
+      if (session >= 0) {
+        clock.text(session);
+      }
+    }, 1000);
   };
   function countdown() {
     timer = setInterval(startTimer, 1000);
-  }
+  };
 });
