@@ -6,7 +6,8 @@ $(document).ready(function() {
   breakLength.text(rest);
   var sessionLength = $("#session-length");
   sessionLength.text(session);
-  var clock = $("#time-left");
+  var timeLeft = $("#time-left");
+  var start = $("#start_stop");
 
   $("#break-decrement").click(function() {
     rest -= 1;
@@ -36,13 +37,12 @@ $(document).ready(function() {
     }
     sessionLength.text(session);
   });
-  $("#timer-label").click(function() {
+  $("#start_stop").click(function() {
     // start timer
-    startTimer();
-    console.log(session);
+    startTimer(session, 0);
   });
   $('#reset').click(function() {
-    clearInterval(timer);
+    clearTimeout(timer);
     rest = 5;
     session = 25;
     // need to fix timer variable?
@@ -50,15 +50,23 @@ $(document).ready(function() {
     breakLength.text(5);
     sessionLength.text(25);
   });
-  function startTimer() {
-    setInterval(function() {
-      session--;
-      if (session >= 0) {
-        clock.text(session);
+  function startTimer(m, s) {
+    if (s === 0) {
+      if (m === 0) {
+        return;
+      } else if (m != 0) {
+        m -= 1;
+        s = 60;
       }
+    } if (s < 10 && m < 10) {
+      timeLeft.text('0' + m + ':0' + s);
+    } else {
+      timeLeft.text(m + ":" + s);
+    }
+    s -= 1;
+    timer = setTimeout(function() {
+      startTimer(m, s);
     }, 1000);
-  };
-  function countdown() {
-    timer = setInterval(startTimer, 1000);
-  };
+  }
+
 });
