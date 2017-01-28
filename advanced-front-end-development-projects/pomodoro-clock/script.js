@@ -38,6 +38,8 @@ $(document).ready(function() {
     sessionLength.text(session);
   });
   $("#start_stop").click(function() {
+    // show timer on start
+    $("#time-left").show();
     // start timer
     startTimer(session, 0);
   });
@@ -46,27 +48,57 @@ $(document).ready(function() {
     rest = 5;
     session = 25;
     // need to fix timer variable?
-    timer = null;
+    timer = "";
     breakLength.text(5);
     sessionLength.text(25);
   });
   function startTimer(m, s) {
     if (s === 0) {
       if (m === 0) {
+        var beep = document.getElementById("audio");
+        beep.play();
         return;
       } else if (m != 0) {
-        m -= 1;
+        m--;
         s = 60;
       }
-    } if (s < 10 && m < 10) {
+    }
+    // fix this!
+    if (s < 10 && m < 10) {
       timeLeft.text('0' + m + ':0' + s);
+    } else if (s < 10)  {
+      timeLeft.text(m + ":0" + s);
+    } else if (m < 10) {
+      timeLeft.text("0" + m + ":" + s);
+    } else if (s === 60) {
+      timeLeft.text(m + ":" + "00");
     } else {
       timeLeft.text(m + ":" + s);
     }
-    s -= 1;
+    s--;
     timer = setTimeout(function() {
       startTimer(m, s);
     }, 1000);
   }
 
+  if (m === 0 && s === 0) {
+    var beep = document.getElementById("audio");
+    beep.play();
+  }
+
 });
+
+/*
+TO DO:
+
+1) clicking start_stop should begin running from session value
+2) running timer should display remaining time in mm:ss format
+3) running timer should pause on start_stop click
+4) paused timer should resume running when start_stop clicked
+5) when timer = 00:00 and new countdown begins, timer-label should display string saying break has begun
+6) when timer = 00:00, start break countdown
+7) when break = 00:00 and new countdown begins, timer-label should display string
+8) when break = 00:00, start session countdown
+9) when coundown = 00:00, play sound
+
+*/
