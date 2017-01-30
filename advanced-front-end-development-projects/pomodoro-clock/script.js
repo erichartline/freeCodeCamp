@@ -10,30 +10,26 @@ $(document).ready(function() {
   var start = $("#start_stop");
 
   $("#break-decrement").click(function() {
-    rest -= 1;
-    if (rest <= 1) {
-      rest = 1;
+    if (rest > 1) {
+      rest--;
     }
     breakLength.text(rest);
   });
   $("#session-decrement").click(function() {
-    session -= 1;
-    if (session <= 1) {
-      session = 1;
+    if (session > 1) {
+      session--;
     }
     sessionLength.text(session);
   });
   $("#break-increment").click(function() {
-    rest += 1;
-    if (rest > 60) {
-      rest = 60;
+    if (rest < 60) {
+      rest++;
     }
     breakLength.text(rest);
   });
   $("#session-increment").click(function() {
-    session += 1;
-    if (session > 60) {
-      session = 60;
+    if (session < 60) {
+      session++;
     }
     sessionLength.text(session);
   });
@@ -52,40 +48,14 @@ $(document).ready(function() {
     breakLength.text(5);
     sessionLength.text(25);
   });
-  function startTimer(m, s) {
-    if (s === 0) {
-      if (m === 0) {
-        var beep = document.getElementById("audio");
-        beep.play();
-        return;
-      } else if (m != 0) {
-        m--;
-        s = 60;
-      }
-    }
-    // fix this!
-    if (s < 10 && m < 10) {
-      timeLeft.text('0' + m + ':0' + s);
-    } else if (s < 10)  {
-      timeLeft.text(m + ":0" + s);
-    } else if (m < 10) {
-      timeLeft.text("0" + m + ":" + s);
-    } else if (s === 60) {
-      timeLeft.text(m + ":" + "00");
-    } else {
-      timeLeft.text(m + ":" + s);
-    }
-    s--;
-    timer = setTimeout(function() {
-      startTimer(m, s);
-    }, 1000);
-  }
+  function startTimer() {
+    var minutes = session;
+    var seconds = session / 60;
 
-  if (m === 0 && s === 0) {
-    var beep = document.getElementById("audio");
-    beep.play();
   }
+  function pauseTimer() {
 
+  };
 });
 
 /*
@@ -99,6 +69,6 @@ TO DO:
 6) when timer = 00:00, start break countdown
 7) when break = 00:00 and new countdown begins, timer-label should display string
 8) when break = 00:00, start session countdown
-9) when coundown = 00:00, play sound
+9) when countdown = 00:00, play sound
 
 */
