@@ -37,25 +37,37 @@ $(document).ready(function() {
     // show timer on start
     $("#time-left").show();
     // start timer
-    startTimer(session, 0);
+
+    startTimer();
   });
   $('#reset').click(function() {
-    clearTimeout(timer);
+    resetTimer();
+  });
+  function startTimer() {
+    var minutes = session;
+    var seconds = session * 60;
+    timer = setInterval(function() {
+      session--;
+      if (session > 0) {
+        timeLeft.text(session);
+      }
+    }, 1000);
+
+  }
+  function pauseTimer() {
+    // stops timer
+    clearInterval(timer);
+  };
+  function resetTimer() {
+    clearInterval(timer);
     rest = 5;
     session = 25;
     // need to fix timer variable?
     timer = "";
+    timeLeft.text(session);
     breakLength.text(5);
     sessionLength.text(25);
-  });
-  function startTimer() {
-    var minutes = session;
-    var seconds = session / 60;
-
   }
-  function pauseTimer() {
-
-  };
 });
 
 /*
