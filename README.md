@@ -29,7 +29,7 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### [Advanced Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/advanced-algorithm-scripting)
 
 ### Advanced Front End Development Projects
-1. [Build a JavaScript Calculator](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/advanced-front-end-development-projects/javascript-calculator)
+1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/portfolio/javascript-calculator/)
 
 2. [Build a Pomodoro Clock](https://github.com/wildlifehexagon/free-code-camp/tree/master/advanced-front-end-development-projects/pomodoro-clock)
 
