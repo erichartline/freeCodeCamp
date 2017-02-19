@@ -1,17 +1,19 @@
 $(document).ready(function() {
+  // initialize variables for every aspect of time
   var rest = 5;
   var session = 25;
   var sessionTime;
+  var breakTime;
   var minutes;
   var seconds;
   var state = "work";
-  var isSession = true;
   var timer;
   // variables for various IDs
   var breakLength = $("#break-length");
   var sessionLength = $("#session-length");
   var timeLeft = $("#time-left");
-  var start = $("#start_stop");
+  var start = $(".start_stop");
+  // audio variable
   var beep = document.getElementById('beep');
   // set text for session and break
   breakLength.text(rest);
@@ -58,36 +60,60 @@ $(document).ready(function() {
     }
     sessionLength.text(session);
   });
-  $("#start_stop").click(function() {
+  // control what happens on start/stop click
+  $(".start_stop").click(function() {
+    // toggle button to show start or stop
+    var $this = $(this);
+    $this.toggleClass('start_stop');
+    if ($this.hasClass('start_stop')) {
+      $this.text('Start');
+    } else {
+      $this.text('Stop');
+    }
     // show timer on start
     $("#time-left").show();
+    // conditionals for correct start/stop use
     if (state === "work") {
-      start.html("Stop");
       sessionTime = session * 60;
-      countdown();
-      state = "start";
-    } else if (state === "start") {
+      workCountdown();
+      state = 'start';
+    } else if (state === "break") {
+      breakTime = rest * 60;
+      breakCountdown();
+      state = 'breakStart';
+    } else if (state === 'start') {
       clearInterval(timer);
-      state = "pause";
-      start.html("Start");
+      state = 'pause';
+    } else if (state === 'breakStart') {
+      clearInterval(timer);
+      state = 'breakPause';
     } else if (state === "pause") {
-      countdown();
-      state = "start";
-      start.html("Start");
+      workCountdown();
+      state = 'start';
+    } else if (state === 'breakPause') {
+      breakCountdown();
+      state = 'start';
     }
   });
+  // go back to default settings when reset button is clicked
   $('#reset').click(function() {
     clearInterval(timer);
     rest = 5;
     session = 25;
     state = "work";
-    isSession = true;
+    start.toggleClass('start_stop');
+    if (start.hasClass('start_stop')) {
+      start.text('Start');
+    } else {
+      start.toggleClass('start_stop');
+    }
     breakLength.html(rest);
     sessionLength.html(session);
     timeLeft.html('25:00');
     $("#timer-label").html("Session");
   });
-  function countdown() {
+  function workCountdown() {
+    state = 'start';
     if (sessionTime >= 0) {
       minutes = Math.floor(sessionTime / 60);
       seconds = sessionTime % 60;
@@ -100,35 +126,40 @@ $(document).ready(function() {
       } else {
         timeLeft.text(minutes + ':' + seconds);
       }
-      sessionTime -= 1;
-      timer = setTimeout(countdown, 1000);
+      sessionTime--;
+      timer = setTimeout(workCountdown, 1000);
     } else {
         beep.play();
         clearInterval(timer);
-        if (isSession) {
-          sessionTime = rest * 60;
-          isSession === false;
-        } else {
-          sessionTime = session * 60;
-          isSession === true;
-        }
-        countdown();
+        breakTime = rest * 60;
+        breakCountdown();
+        state = 'break';
         $("#timer-label").html("Time for your break!");
       }
   };
+  function breakCountdown() {
+    state = 'breakStart';
+    if (breakTime >= 0) {
+      minutes = Math.floor(breakTime / 60);
+      seconds = breakTime % 60;
+      if (minutes < 10 && seconds < 10) {
+        timeLeft.text('0' + minutes + ':0' + seconds);
+      } else if (minutes < 10) {
+        timeLeft.text('0' + minutes + ':' + seconds);
+      } else if (seconds < 10) {
+        timeLeft.text(minutes + ':0' + seconds);
+      } else {
+        timeLeft.text(minutes + ':' + seconds);
+      }
+      breakTime--;
+      timer = setTimeout(breakCountdown, 1000);
+    } else {
+        beep.play();
+        clearInterval(timer);
+        sessionTime = session * 60;
+        workCountdown();
+        state = 'work';
+        $("#timer-label").html("Back to work!");
+      }
+  }
 });
-
-/*
-TO DO:
-
-1) When I click the element with the id of "reset", any running timer should be stopped, the value within id="break-length" should return to 5, the value within id="session-length" should return to 25, and the element with id="time-left" should reset to it's default state.
-2) running timer should display remaining time in mm:ss format
-3) running timer should pause on start_stop click
-4) paused timer should resume running when start_stop clicked
-5) when timer = 00:00 and new countdown begins, timer-label should display string saying break has begun
-6) when timer = 00:00, start break countdown
-7) when break = 00:00 and new countdown begins, timer-label should display string
-8) when break = 00:00, start session countdown
-9) when countdown = 00:00, play sound
-
-*/
