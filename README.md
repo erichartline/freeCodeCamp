@@ -9,19 +9,19 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### Basic Front End Development projects
 1. [Build a Tribute Page](https://codepen.io/wildlifehexagon/full/GozYYd/)
 
-2. [Build a Personal Portfolio Webpage](http://www.erichartline.net)
+2. [Build a Personal Portfolio Webpage](https://wildlifehexagon.github.io/)
 
 
 ### [Basic Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/basic-algorithm-scripting)
 
 ### Intermediate Front End Development Projects
-1. [Build a Random Quote Machine](https://codepen.io/wildlifehexagon/full/eNPVMj/)
+1. [Build a Random Quote Machine](https://wildlifehexagon.github.io/portfolio/random-quote-generator/)
 
-2. [Show the Local Weather](https://codepen.io/wildlifehexagon/full/vKWpxY/)
+2. [Show the Local Weather](https://wildlifehexagon.github.io/portfolio/local-weather-app/)
 
-3. [Build a Wikipedia Viewer](https://codepen.io/wildlifehexagon/full/kXvKrN/)
+3. [Build a Wikipedia Viewer](https://wildlifehexagon.github.io/portfolio/wikipedia-viewer/)
 
-4. [Use the Twitch.tv JSON API](https://codepen.io/wildlifehexagon/full/Wxaqzw/)
+4. [Use the Twitch.tv JSON API](https://wildlifehexagon.github.io/portfolio/twitchtv-channel-app/)
 
 
 ### [Intermediate Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/intermediate-algorithm-scripting)
@@ -31,8 +31,8 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### Advanced Front End Development Projects
 1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/portfolio/javascript-calculator/)
 
-2. [Build a Pomodoro Clock](https://github.com/wildlifehexagon/free-code-camp/tree/master/advanced-front-end-development-projects/pomodoro-clock)
+2. [Build a Pomodoro Clock](https://wildlifehexagon.github.io/portfolio/pomodoro-clock/)
 
-3. [Build a Tic Tac Toe Game](https://codepen.io/wildlifehexagon/full/PbBjvP/)
+3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/portfolio/tic-tac-toe/)
 
 4. Build a Simon Game

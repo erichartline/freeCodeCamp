@@ -112,6 +112,7 @@ $(document).ready(function() {
     timeLeft.html('25:00');
     $("#timer-label").html("Session");
   });
+  // start countdown for work timer
   function workCountdown() {
     state = 'start';
     if (sessionTime >= 0) {
@@ -128,7 +129,7 @@ $(document).ready(function() {
       }
       sessionTime--;
       timer = setTimeout(workCountdown, 1000);
-    } else {
+    } else { // play sound and switch to break timer when zero
         beep.play();
         clearInterval(timer);
         breakTime = rest * 60;
@@ -137,6 +138,7 @@ $(document).ready(function() {
         $("#timer-label").html("Time for your break!");
       }
   };
+  // start countdown for break timer
   function breakCountdown() {
     state = 'breakStart';
     if (breakTime >= 0) {
@@ -153,7 +155,7 @@ $(document).ready(function() {
       }
       breakTime--;
       timer = setTimeout(breakCountdown, 1000);
-    } else {
+    } else { // play sound and switch to work timer when zero
         beep.play();
         clearInterval(timer);
         sessionTime = session * 60;
