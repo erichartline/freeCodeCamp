@@ -31,7 +31,7 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### Advanced Front End Development Projects
 1. [Build a JavaScript Calculator](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/advanced-front-end-development-projects/javascript-calculator)
 
-2. Build a Pomodoro Clock
+2. [Build a Pomodoro Clock](https://github.com/wildlifehexagon/free-code-camp/tree/master/advanced-front-end-development-projects/pomodoro-clock)
 
 3. [Build a Tic Tac Toe Game](https://codepen.io/wildlifehexagon/full/PbBjvP/)
 
