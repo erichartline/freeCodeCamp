@@ -1,5 +1,5 @@
 # Free Code Camp
-A collection of all of my Free Code Camp work. This includes all solved algorithm challenges, as well as my finished projects.
+This is a directory of my solutions to the algorithm challenges on Free Code Camp. This README includes all solved algorithm challenges, as well as links to my finished projects.
 
 [FCC Profile Link](https://www.freecodecamp.com/wildlifehexagon)
 
@@ -29,10 +29,10 @@ A collection of all of my Free Code Camp work. This includes all solved algorith
 ### [Advanced Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/advanced-algorithm-scripting)
 
 ### Advanced Front End Development Projects
-1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/portfolio/javascript-calculator/)
+1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/javascript-calculator/)
 
 2. [Build a Pomodoro Clock](https://wildlifehexagon.github.io/portfolio/pomodoro-clock/)
 
-3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/portfolio/tic-tac-toe/)
+3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/tic-tac-toe/)
 
 4. Build a Simon Game
