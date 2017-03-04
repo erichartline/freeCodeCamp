@@ -1,5 +1,5 @@
 # Free Code Camp
-This is a directory of my solutions to the algorithm challenges on Free Code Camp. This README includes all solved algorithm challenges, as well as links to my finished projects.
+This is a directory of my solutions to the algorithm challenges on Free Code Camp. This page includes all of my solved algorithm challenges, as well as links to my finished projects.
 
 [FCC Profile Link](https://www.freecodecamp.com/wildlifehexagon)
 
@@ -15,13 +15,13 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 ### [Basic Algorithm Scripting](https://github.com/wildlifehexagon/free-code-camp/tree/master/basic-algorithms)
 
 ### Intermediate Front End Development Projects
-1. [Build a Random Quote Machine](https://wildlifehexagon.github.io/portfolio/random-quote-generator/)
+1. [Build a Random Quote Machine](https://wildlifehexagon.github.io/random-quote-generator/)
 
-2. [Show the Local Weather](https://wildlifehexagon.github.io/portfolio/local-weather-app/)
+2. [Show the Local Weather](http://www.erichartline.net/portfolio/local-weather-app/)
 
-3. [Build a Wikipedia Viewer](https://wildlifehexagon.github.io/portfolio/wikipedia-viewer/)
+3. [Build a Wikipedia Viewer](https://wildlifehexagon.github.io/wikipedia-viewer/)
 
-4. [Use the Twitch.tv JSON API](https://wildlifehexagon.github.io/portfolio/twitchtv-channel-app/)
+4. [Use the Twitch.tv JSON API](https://wildlifehexagon.github.io/twitchtv-channel-app/)
 
 
 ### [Intermediate Algorithm Scripting](https://github.com/wildlifehexagon/free-code-camp/tree/master/intermediate-algorithms)
@@ -31,7 +31,7 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 ### Advanced Front End Development Projects
 1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/javascript-calculator/)
 
-2. [Build a Pomodoro Clock](https://wildlifehexagon.github.io/portfolio/pomodoro-clock/)
+2. [Build a Pomodoro Clock](https://wildlifehexagon.github.io/pomodoro-clock/)
 
 3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/tic-tac-toe/)
 
