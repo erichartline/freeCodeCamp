@@ -12,7 +12,7 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 2. [Build a Personal Portfolio Webpage](https://wildlifehexagon.github.io/)
 
 
-### [Basic Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/basic-algorithm-scripting)
+### [Basic Algorithm Scripting](https://github.com/wildlifehexagon/free-code-camp/tree/master/basic-algorithms)
 
 ### Intermediate Front End Development Projects
 1. [Build a Random Quote Machine](https://wildlifehexagon.github.io/portfolio/random-quote-generator/)
@@ -24,9 +24,9 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 4. [Use the Twitch.tv JSON API](https://wildlifehexagon.github.io/portfolio/twitchtv-channel-app/)
 
 
-### [Intermediate Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/intermediate-algorithm-scripting)
+### [Intermediate Algorithm Scripting](https://github.com/wildlifehexagon/free-code-camp/tree/master/intermediate-algorithms)
 
-### [Advanced Algorithm Scripting](https://github.com/wildlifehexagon/Free-Code-Camp/tree/master/advanced-algorithm-scripting)
+### [Advanced Algorithm Scripting](https://github.com/wildlifehexagon/free-code-camp/tree/master/advanced-algorithms)
 
 ### Advanced Front End Development Projects
 1. [Build a JavaScript Calculator](https://wildlifehexagon.github.io/javascript-calculator/)
