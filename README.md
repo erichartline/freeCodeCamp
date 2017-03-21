@@ -36,3 +36,53 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/tic-tac-toe/)
 
 4. Build a Simon Game
+
+
+## Back End Development Certification
+
+### API Projects
+1. [Timestamp Microservice](https://radiant-journey-45459.herokuapp.com/)
+
+2. [Request Header Parser Microservice](https://salty-island-31009.herokuapp.com/)
+
+3. URL Shortener Microservice
+
+4. Image Search Abstraction Layer
+
+5. File Metadata Microservice
+
+### Dynamic Web Application Projects
+1. Build a Voting App
+
+2. Build a Nightlife Coordination App
+
+3. Chart the Stock Market
+
+4. Manage a Book Trading Club
+
+5. Build a Pinterest Clone
+
+
+## Data Visualization Certification
+
+### React Projects
+1. Build a Markdown Previewer Incomplete
+
+2. Build a Camper Leaderboard Incomplete
+
+3. Build a Recipe Box Incomplete
+
+4. Build the Game of Life Incomplete
+
+5. Build a Roguelike Dungeon Crawler Game
+
+### Data Visualization Projects
+1. Visualize Data with a Bar Chart
+
+2. Visualize Data with a Scatterplot Graph
+
+3. Visualize Data with a Heat Map
+
+4. Show National Contiguity with a Force Directed Graph
+
+5. Map Data Across the Globe
