@@ -66,13 +66,13 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 ## Data Visualization Certification
 
 ### React Projects
-1. Build a Markdown Previewer Incomplete
+1. Build a Markdown Previewer
 
-2. Build a Camper Leaderboard Incomplete
+2. Build a Camper Leaderboard
 
-3. Build a Recipe Box Incomplete
+3. Build a Recipe Box
 
-4. Build the Game of Life Incomplete
+4. Build the Game of Life
 
 5. Build a Roguelike Dungeon Crawler Game
 
