@@ -1,1 +1,18 @@
-Basic algorithm challenges
+# Basic Algorithm Challenges
+
+1. [Reverse a String](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/01-reverse-a-string.js)
+2. [Factorialize a Number](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/02-factorialize-a-number.js)
+3. [Check for Palindromes](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/03-check-for-palindromes.js)
+4. [Find the Longest Word in a String](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/04-find-the-longest-word-in-a-string.js)
+5. [Title Case a Sentence](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/05-title-case-a-sentence.js)
+6. [Return Largest Numbers in Arrays](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/06-return-largest-numbers-in-arrays.js)
+7. [Confirm the Ending](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/07-confirm-the-ending.js)
+8. [Repeat a string repeat a string](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/08-repeat-a-string-repeat-a-string.js)
+9. [Truncate a string](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/09-truncate-a-string.js)
+10. [Chunky Monkey](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/10-chunky-monkey.js)
+11. [Slasher Flick](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/11-slasher-flick.js)
+12. [Mutations](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/12-mutations.js)
+13. [Falsy Bouncer](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/13-falsy-bouncer.js)
+14. [Seek and Destroy](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/14-seek-and-destroy.js)
+15. [Where do I belong](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/15-where-do-i-belong.js)
+16. [Caesars Cipher](https://github.com/wildlifehexagon/free-code-camp/blob/master/basic-algorithms/16-caesars-cipher.js)
