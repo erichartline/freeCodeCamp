@@ -5,15 +5,13 @@ Your response should be a number.
 */
 
 function findLongestWord(str) {
-  var longest = 0;
-  str = str.split(' ');
-
-  for (var i = 0; i < str.length; i++) {
-    if (str[i].length > longest) {
-      longest = str[i].length;
+  let longest = 0;
+  let word = str.split(' ');
+  word.forEach(function(words) {
+    if (words.length > longest) {
+      longest = words.length;
     }
-  }
-
+  });
   return longest;
 }
 

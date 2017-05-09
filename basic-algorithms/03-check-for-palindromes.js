@@ -12,16 +12,13 @@ We'll also pass strings with special symbols, such as "2A3*3a2", "2A3 3a2", and 
 */
 
 function palindrome(str) {
-
-  str = str.toLowerCase().replace(/[\W_]+/g,'');
-  var reverse = str.split('').reverse().join('');
-
-  if (str === reverse) {
+  let word = str.replace(/[^A-Za-z0-9]/g, '').toLowerCase();
+  let reverse = word.split('').reverse().join('');
+  if (word === reverse) {
     return true;
   } else {
     return false;
   }
-
 }
 
 palindrome("eye");
