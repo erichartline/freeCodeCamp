@@ -5,13 +5,11 @@ For the purpose of this exercise, you should also capitalize connecting words li
 */
 
 function titleCase(str) {
-  var word = str.toLowerCase().split(" ");
-
-  for (var i = 0; i < word.length; i++) {
-    word[i] = word[i].charAt(0).toUpperCase() + word[i].substring(1);
+  let words = str.split(' ');
+  for (let i = 0; i < words.length; i++) {
+    words[i] = words[i].charAt(0).toUpperCase() + words[i].substr(1).toLowerCase();
   }
-
-  return word.join(' ');
+  return words.join(' ');
 }
 
 titleCase("I'm a little tea pot");
