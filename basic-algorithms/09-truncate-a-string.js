@@ -7,15 +7,12 @@ However, if the given maximum string length num is less than or equal to 3, then
 */
 
 function truncateString(str, num) {
-
-  if (str.length > num && num > 3) {
-    return str.slice(0, num - 3) + "...";
-  } else if (str.length > num && num <= 3) {
-    return str.slice(0, num) + "...";
-  } else {
-    return str;
+  if (num <= 3) {
+    return str.slice(0, num) + '...';
+  } else if (str.length > num) {
+    return str.slice(0, num - 3) + '...';
   }
-
+  return str;
 }
 
 truncateString("A-tisket a-tasket A green and yellow basket", 11);

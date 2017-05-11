@@ -3,14 +3,7 @@ Repeat a given string (first argument) num times (second argument). Return an em
 */
 
 function repeatStringNumTimes(str, num) {
-
-  if (num > 0) {
-    return str.repeat(num);
-  } else {
-    return "";
-  }
-
-  return str;
+  return num > 0 ? str.repeat(num) : '';
 }
 
 repeatStringNumTimes("*", 3);

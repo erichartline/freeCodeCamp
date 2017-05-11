@@ -5,13 +5,7 @@ This challenge can be solved with the .endsWith() method, which was introduced i
 */
 
 function confirmEnding(str, target) {
-
-  if (str.substr(-target.length) === target) {
-    return true;
-  } else {
-    return false;
-  }
-
+  return target === str.substr(-target.length);
 }
 
 confirmEnding("Bastian", "n");
