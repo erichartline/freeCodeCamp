@@ -6,6 +6,6 @@
 4. [Exact Change](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/04-exact-change.js)
 5. [Inventory Update](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/05-inventory-update.js)
 6. No Repeats Please
-7. Make a Person
+7. [Make a Person](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/07-make-a-person.js)
 8. Map the Debris
 9. Pairwise
