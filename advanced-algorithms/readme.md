@@ -7,5 +7,5 @@
 5. [Inventory Update](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/05-inventory-update.js)
 6. No Repeats Please
 7. [Make a Person](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/07-make-a-person.js)
-8. Map the Debris
+8. [Map the Debris](https://github.com/wildlifehexagon/free-code-camp/blob/master/advanced-algorithms/08-map-the-debris.js)
 9. Pairwise
