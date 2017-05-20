@@ -35,7 +35,7 @@ This is a directory of my solutions to the algorithm challenges on Free Code Cam
 
 3. [Build a Tic Tac Toe Game](https://wildlifehexagon.github.io/tic-tac-toe/)
 
-4. Build a Simon Game
+4. [Build a Simon Game](https://wildlifehexagon.github.io/simon-game/)
 
 
 ## Back End Development Certification
